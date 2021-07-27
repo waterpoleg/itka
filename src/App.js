@@ -1,25 +1,29 @@
 import logo from './logo.svg';
 import './App.css';
+import Header from "./components/Header/Header";
+import Profile from "./components/Profile/Profile";
+import Footer from "./components/Footer/Footer";
+import MainMenu from "./components/MainMenu/MainMenu";
+import Dialogs from "./components/Dialogs/Dialogs";
+import {BrowserRouter, Route} from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+    return (
+        <BrowserRouter>
+            <div className='app-wrapper'>
+                <Header/>
+                <MainMenu/>
+                <div className='app-wrapper-content'>
+                    <Route path='/dialogs' component={Dialogs}/>
+                    <Route path='/profile' component={Profile}/>
+                    {/*<Route path='/News' component={News}/>
+                    <Route path='/Music' component={Music}/>
+                    <Route path='/Settings' component={Settings}/>*/}
+                </div>
+                <Footer/>
+            </div>
+        </BrowserRouter>
+    );
 }
 
 export default App;
