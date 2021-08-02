@@ -1,8 +1,4 @@
 .footer {
-    /*grid-area: h;*/
+    grid-area: ft;
     background-color: saddlebrown;
-}
-
-.header_image img {
-    width: 170px;
 }
