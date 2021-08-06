@@ -6,6 +6,7 @@ import Footer from "./components/Footer/Footer";
 import MainMenu from "./components/MainMenu/MainMenu";
 import Dialogs from "./components/Dialogs/Dialogs";
 import {BrowserRouter, Route} from 'react-router-dom';
+import {updateNewPostText} from "./redux/state";
 
 const App = (props) => {
 
@@ -16,7 +17,9 @@ const App = (props) => {
                 <MainMenu/>
                 <div className='app-wrapper-content'>
                     <Route path='/dialogs' render={ () => <Dialogs state={props.state.dialogsPage} /> } />
-                    <Route path='/profile' render={ () => <Profile state={props.state.profilePage} addPost={props.addPost}/> } />
+                    <Route path='/profile' render={ () => <Profile profilePage={props.state.profilePage}
+                                                                   addPost={props.addPost}
+                                                                   updateNewPostText = {props.updateNewPostText} /> } />
                     {/*<Route path='/News' component={News}/>
                     <Route path='/Music' component={Music}/>
                     <Route path='/Settings' component={Settings}/>*/}
