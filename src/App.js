@@ -5,6 +5,7 @@ import Footer from "./components/Footer/Footer";
 import MainMenu from "./components/MainMenu/MainMenu";
 import Dialogs from "./components/Dialogs/Dialogs";
 import {BrowserRouter, Route} from 'react-router-dom';
+import DialogsContainer from "./components/Dialogs/DialogsContainer";
 
 const App = (props) => {
     return (
@@ -13,9 +14,8 @@ const App = (props) => {
                 <Header/>
                 <MainMenu/>
                 <div className='app-wrapper-content'>
-                    <Route path='/dialogs' render={ () => <Dialogs store={props.store} /> } />
-                    <Route path='/profile' render={ () => <Profile profilePage={props.state.profileReducer}
-                                                                   dispatch={props.dispatch} /> } />
+                    <Route path='/dialogs' render={ () => <DialogsContainer store={props.store} /> } />
+                    <Route path='/profile' render={ () => <Profile store={props.store} /> } />
                     {/*<Route path='/News' component={News}/>
                     <Route path='/Music' component={Music}/>
                     <Route path='/Settings' component={Settings}/>*/}
