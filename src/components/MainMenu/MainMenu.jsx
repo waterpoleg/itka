@@ -12,6 +12,10 @@ const MainMenu = () => {
                 <NavLink to="/dialogs" activeClassName={s.activeLink}>Messages</NavLink>
                 {/*<a href="/dialogs">Messages</a>*/}
             </div>
+            <div className={s.item}>
+                <NavLink to="/users" activeClassName={s.activeLink}>Users</NavLink>
+                {/*<a href="/dialogs">Messages</a>*/}
+            </div>
             <div>
                 <a>News</a>
             </div>
