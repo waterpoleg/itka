@@ -16,14 +16,6 @@ let store = {
             newPostText: 'itka'
         },
         dialogsPage: {
-            messages: [
-                {id: 1, message: 'Hi'},
-                {id: 2, message: 'How are you'},
-                {id: 3, message: 'Hello'},
-                {id: 4, message: 'message 4'},
-                {id: 5, message: 'message 5'},
-                {id: 6, message: 'message 6'},
-            ],
             dialogs: [
                 {id: 1, name: 'name 1'},
                 {id: 2, name: 'name 2'},
@@ -31,6 +23,14 @@ let store = {
                 {id: 4, name: 'name 4'},
                 {id: 5, name: 'name 5'},
                 {id: 6, name: 'name 6'},
+            ],
+            messages: [
+                {id: 1, message: 'Hi'},
+                {id: 2, message: 'How are you'},
+                {id: 3, message: 'Hello'},
+                {id: 4, message: 'message 4'},
+                {id: 5, message: 'message 5'},
+                {id: 6, message: 'message 6'},
             ],
             newMessageBody: ""
         },
