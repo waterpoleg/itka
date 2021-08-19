@@ -3,21 +3,19 @@ import styles from './users.module.css';
 import * as axios from "axios";
 import userPhoto from '../../assets/images/userpic.png';
 
-let Users = (props) => {
-    let getUsers = () =>
-    {
-        if (props.users.length === 0) {
-            axios.get("https://social-network.samuraijs.com/api/1.0/users")
-                .then(response => {
-                    props.setUsers(response.data.items);
-                });
-        }
+class Users extends React.Component {
+    constructor(props) {
+        super(props);
+        axios.get("https://social-network.samuraijs.com/api/1.0/users")
+            .then(response => {
+                this.props.setUsers(response.data.items);
+            });
     }
-debugger
+
+    render() {
         return <div>
-            <button onClick={getUsers}>Get Users</button>
             {
-                props.users.map(u => <div key={u.id}>
+                this.props.users.map(u => <div key={u.id}>
                     <span>
                         <div>
                             <img src={u.photos.small != null ? u.photos.small : userPhoto}
@@ -41,7 +39,8 @@ debugger
                     </span>
                 </div>)
             }
-            </div>
+        </div>
     }
+}
 
 export default Users;
