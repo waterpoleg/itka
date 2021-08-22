@@ -3,6 +3,18 @@
     background-color: green;
 }
 
+.loginBlock {
+    float: right;
+}
+
+.loginBlock {
+    color: white;
+}
+
+.loginBlock {
+    padding: 40px;
+}
+
 .header_image img {
     width: 170px;
 }
