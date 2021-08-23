@@ -3,7 +3,6 @@ import styles from "./users.module.css";
 import userPhoto from "../../assets/images/userpic.png";
 import {NavLink} from "react-router-dom";
 import * as axios from "axios";
-import {toggleFollowingProgress} from "../../redux/users-reducer";
 
 let Users = (props) => {
 
