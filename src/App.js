@@ -15,7 +15,7 @@ import {initializeApp} from "./redux/app-reducer";
 
 class App extends Component {
     componentDidMount() {
-        this.props.getAuthUserData();
+        this.props.initializeApp();
     }
 
     render() {
