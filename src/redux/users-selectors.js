@@ -1,5 +1,5 @@
 export const getUsers = (state) => {
-    return state.usersPage.users;
+    return state.usersPage.users.filter(u => true);
 }
 
 export const getPageSize = (state) => {
@@ -17,6 +17,13 @@ export const getCurrentPage = (state) => {
 export const getIsFetching = (state) => {
     return state.usersPage.isFetching;
 }
+
 export const getFollowingInProgress = (state) => {
     return state.usersPage.followingInProgress;
+}
+
+export const countSomethingDifficult = (state) => {
+    /*debugger*/
+    let count = 23;
+    return count;
 }

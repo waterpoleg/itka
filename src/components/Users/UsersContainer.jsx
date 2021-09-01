@@ -58,6 +58,7 @@ let mapStateToProps = (state) => {
 */
 
 let mapStateToProps = (state) => {
+    console.log('mapStateToProps USERS');
     return {
         users: getUsers(state),
         pageSize: getPageSize(state),
