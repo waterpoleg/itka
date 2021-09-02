@@ -1,7 +1,7 @@
 import './App.css';
 import Footer from "./components/Footer/Footer";
 import MainMenu from "./components/MainMenu/MainMenu";
-import {Route, withRouter} from 'react-router-dom';
+import {BrowserRouter, Route, withRouter} from 'react-router-dom';
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
 import UsersContainer from "./components/Users/UsersContainer";
 import ProfileContainer from "./components/Profile/ProfileContainer";
@@ -10,8 +10,9 @@ import LoginPage from "./components/Login/Login";
 import {Component} from "react";
 import Preloader from "./components/common/Preloader/Preloader";
 import {compose} from "redux";
-import {connect} from "react-redux";
+import {connect, Provider} from "react-redux";
 import {initializeApp} from "./redux/app-reducer";
+import store from "./redux/redux-store";
 
 class App extends Component {
     componentDidMount() {
